@@ -16,7 +16,7 @@
 - ```slots``` list in which 0 represent the unavailability of the slot i at slots[i], and 1 represent the availability 
 - ```slot_map``` dictionary in which key:represents the slot, and value:is the list of [drive_age,car_number]
 - ```age_map``` dictionary in which key:represents the age, and value:is the list of [slot,car_number]
-- ```queue``` queue in which will contain the list of car which is waiting, in case of non-availability of slots
+- ```queue``` queue which will contain the list of car which are waiting, in case of non-availability of slots
 
 ### Pipeline Explanaion:
 I have considered 5 cases (according to given description) as per input command.
