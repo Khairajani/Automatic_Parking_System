@@ -53,7 +53,6 @@ class servies:
 
         self.slot_map[ind] = []
 
-
         if drive_age in list(self.age_map.keys()):
             for i in range(len(self.age_map[drive_age])):
                 if self.age_map[drive_age][i][0]==ind:
@@ -73,7 +72,7 @@ class servies:
         if len(self.queue)!=0:
             drive_age, car_number = self.queue.pop(0)
             
-            self.slot_map[ind+1] = [drive_age,car_number]
+            self.slot_map[ind] = [drive_age,car_number]
             self.slots[ind-1] = 0
 
             if drive_age in list(self.age_map.keys()):
