@@ -44,12 +44,12 @@ I have considered 5 cases (according to given description) as per input command.
 - If it matched return the key
 - Write the output in the file
 
-#### 4. Slots with respect driver_age
+#### 4. Slots with respect to driver_age
 - Check if ```age_map``` has any key driver_age, if no, do nothing
 - If yes, iterate through every age_map[drive_age] list and append all the slots (1st element of the list) in the temporary list
 - At last Write the output in the file using join function
 
-#### 5. Vehicle number with respect driver_age
+#### 5. Vehicle number with respect to driver_age
 - Same as previous
 - Check if ```age_map``` has any key driver_age, if no, do nothing
 - If yes, iterate through every age_map[drive_age] list and append all the car_number (2nd element of the list) in the temporary list
