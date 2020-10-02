@@ -4,14 +4,18 @@ import utils
 fname = input("Enter Input File Name: ")
 print()
 
-#open the file
-file_input = open(fname, "r")
+try:
+    #open the file
+    file_input = open(fname, "r")
+
+except:
+    print("File doesn't exist. Please enter a valid file name (including the extension '.txt')")
+    exit()
 
 #create the output file to write the content
 file_ouput = open("output.txt", "a")
 
-
-#reading the first command to create parking slots
+#reading the first command to create parking slots of given number
 n = int(file_input.readline().split(' ')[1])
 
 #writing the first output line
@@ -34,6 +38,12 @@ for input_line in file_input:
     # Case 2: Leave Command
     elif input_line[0]=='Leave':
         output_line = serve.leave(input_line)
+        if len(output_line)==1:
+            output_line = output_line[0]
+        else:
+            print(output_line[0])
+            file_ouput.write(output_line[0])
+            output_line = output_line[1]
 
     # Case 3: Slot WRT Vehicle number 
     elif input_line[0]=='Slot_number_for_car_with_number':
@@ -53,5 +63,12 @@ for input_line in file_input:
     file_ouput.write(output_line)
 
 #closing the output file
-file_ouput.write("\n")
+if len(serve.queue)>0:
+    output_line = "Total waiting cars are "+str(len(serve.queue))+"\n"
+
+    print(output_line)
+    file_ouput.write(output_line)
+
+file_ouput.write("\n\n")
 file_ouput.close()
+
