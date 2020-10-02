@@ -56,7 +56,8 @@ I have considered 5 cases (according to given description) as per input command.
 - At last Write the output in the file using join function
 
 ### Run
-Simply run the ```main.py``` file and enter ```input.txt```
+- Simply run the ```main.py``` file and enter ```input.txt```
+- Scripts automatically loops over each input and pass the input to respective func. of ```utils.py``` to complete the given task of the respective case
 
 ### ouput/result
 - You will see in terminal for the expected output line by line
