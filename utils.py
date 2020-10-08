@@ -111,11 +111,13 @@ class servies:
         output_line="\n"
 
         temp = []
-        for ls in self.age_map[drive_age]:
-            temp.append(str(ls[0]))
-        
-        temp = ",".join(temp)
-        output_line = "Slot numbers for the driver of age "+str(drive_age)+" are "+temp+"\n"
+        if drive_age in list(self.age_map.keys()):
+            for ls in self.age_map[drive_age]:
+                temp.append(str(ls[0]))
+            
+            temp = ",".join(temp)
+            output_line = "Slot numbers for the driver of age "+str(drive_age)+" are "+temp+"\n"
+            
         return output_line
     
     # Case 5: Vehicle number WRT drive's age command
