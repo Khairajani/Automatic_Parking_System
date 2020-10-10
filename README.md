@@ -1,5 +1,5 @@
-# squadstack_assessment
-## This is my submission to take-home assessment for SquadStack.
+<!-- # squadstack_assessment
+## This is my submission to take-home assessment for SquadStack. -->
 
 ## Getting started
 ### Requirements
